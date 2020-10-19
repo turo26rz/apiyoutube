@@ -1,0 +1,69 @@
+<!--
+  * Prueba Técnica, Creative Drive Latam 2020, Api de Youtube
+  * ChannelPlay 
+  * author Arturo Romero Zamora aromero2662@hotmail.es |aromero2662@gmail.com
+  * HTML,CSS,JS,SASS.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ChannelPlay</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/x-icon" href="img/play-song.png" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> <!--Llamada de los atributos de bootstrap-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+      
+    </head>
+    <body>
+        <div class="contenedor" id="c">
+            <header>
+                <nav class="navbar fixed-top navbar-light navcolor" >
+                    <a class="navbar-brand animate__animated animate__bounce n" href="index.html" style="color: white;">ChannelPlay</a>
+                    <div id="reloj"> 00 : 00 : 00  </div> <!--Insertamos la funcion de id=reloj-->
+                  </nav>
+            </header>
+
+            <section class="filtrado "> <!--Inicio section-->
+                <form id="form" autocomplete="on" >
+                <div class="form-group centered">
+                    <input type="search" class="form-control posicionar " id="search" placeholder="buscar..." style="width: 500px;" required>
+                    <!--Input: le asignamos el id="search" utilizada en el js,con el que que hacemos la busqueda de videos-->
+                    <!--required: validamos que no este en blanco el input-->
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btnbuscar btn-light regular-button " value="Search" required> 
+                    <!--Button: lo declaramos Type= submit, utilizada en el js con el que hacemos la funcion buscar -->
+                    <button type="reset" class="btn btncancelar btn-light regular-button "  value="Recargar página" onClick="location.reload();"></button>                    
+                    <!--Button: Utilizamos la funcion onclick para poder refrescar nuestra pagina-->
+                </div>
+            </form>
+            </section><!--Fin, section-->
+       
+            <section class="mostrarvideos"> <!--Inicio section--> 
+              <div class="row" >
+                  <div class="col-md-12">
+                      <div id="videos"> <!--Mostramos los videos en el div-->
+                      </div>
+                  </div>
+              </div>
+            </section> <!--Fin section-->
+
+            <a id="backtotop" title="Ir al Inicio " href="#c" class="visible"><img class="imgtamano" 
+                src="img/arrow-up.png"></i></a> <!--Implementacion de funcion que nos lleve al menu al darle clic-->
+
+            <footer class="page-footer font-small blue"> <!--Inicio footer-->
+                <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                  <a  href=""> ChannelPlay.com</a>
+                </div>
+            </footer><!--Fin footer-->
+        </div>
+        <!--Llamadas a los archivos js-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"> </script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
+
+

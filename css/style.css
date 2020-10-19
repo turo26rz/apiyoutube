@@ -1,0 +1,184 @@
+@charset "UTF-8";
+/*
+  * Prueba Técnica, Creative Drive Latam 2020, Api de Youtube
+  * ChannelPlay 
+  * author Arturo Romero Zamora aromero2662@hotmail.es |aromero2662@gmail.com
+  *
+*/
+/*Declaraciones de variables*/
+/*Declaramos el valor de la variable al 100% para altura y anchura. */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+header {
+  margin: 20px 0;
+  width: 100%;
+  height: 100%;
+  /*Fin de atributos para el reloj*/
+}
+
+header .navcolor {
+  /*Le asignamos el color negro a nuestro menu (nav)*/
+  background-color: black;
+}
+
+header #reloj {
+  /*Inicio de atributos para el reloj*/
+  width: 300px;
+  padding: 5px 10px;
+  font: bold 1.5em dotum, "lucida sans", arial;
+  float: right;
+  color: white;
+}
+
+.filtrado {
+  /* Le damos atributos al primer section donde tenemos nuestro input y button de busqueda*/
+  clear: both;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 500px;
+  color: black;
+  background-image: url("../img/azulrojoo.jfif");
+  background-size: cover;
+  background-position: center;
+  margin-top: 30px;
+}
+
+.filtrado .btnbuscar {
+  /*Atributos al boton con el que realizamos la busqueda*/
+  margin-left: 10px;
+  width: 90px;
+  height: 35px;
+  background-image: url("../img/lupa.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.filtrado .btncancelar {
+  /*Atributos al boton con el que realizamos la busqueda*/
+  margin-left: 10px;
+  width: 90px;
+  height: 35px;
+  background-image: url("../img/refresh.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.filtrado .container-fluid {
+  /*Posicionamos el boton en el centro de la pantalla*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.filtrado .centered {
+  /*Posicionamos el input en el centro de la pantalla*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 350px;
+}
+
+.mostrarvideos {
+  /* Le damos atributos al segundo section donde desplegamos nuestras busquedas*/
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #f7f7f7;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 5px;
+  color: white;
+}
+
+footer {
+  /* Atributos a nuestro pie de pagina*/
+  clear: both;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  color: white;
+  background: black;
+  margin-top: 5px;
+}
+
+/*Inicio del metodo de hacer responsivo la web*/
+@media screen and (max-width: 800px) {
+  /*Al llegar a 800px al reducir la pantalla hacemos que tome el 100%*/
+  .footer,
+  .filtrado, .mostrar {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /*Al llegar a 500px al reducir la pantalla hacemos que tome el 100%*/
+  .contenedor {
+    width: 100%;
+  }
+}
+
+/*Fin del metodo responsivo */
+/*Atrubutos y funciones para boton que nos ayuda a subir al menus desde abajo de la pantalla*/
+#backtotop.visible {
+  visibility: visible;
+}
+
+#backtotop {
+  z-index: 999;
+  display: inline-block;
+  position: fixed;
+  visibility: hidden;
+  bottom: 20px;
+  right: 25px;
+  width: 50px;
+  height: 80px;
+  line-height: 36px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#backtotop a {
+  outline: none;
+  text-decoration: none;
+}
+
+#backtotop ::before, #backtotop *::after {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#backtotop ::before, #backtotop *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#backtotop a:-webkit-any-link {
+  cursor: pointer;
+}
+
+/*Fin para subir*/
+/*# sourceMappingURL=style.css.map */
